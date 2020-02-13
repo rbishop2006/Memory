@@ -6,3 +6,17 @@ html {
 *::after {
   box-sizing: inherit;
 }
+* {
+  border: 1px solid black;
+}
+.game {
+  display: grid;
+  justify-content: center;
+}
+#player1 {
+}
+.card {
+  width: 100px;
+  height: 100px;
+  font-size: 30px;
+}

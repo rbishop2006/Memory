@@ -1,1 +1,6 @@
-$(documment).ready(function() {})
+$(document).ready(function() {
+  var memory = new Memory("pname")
+
+  memory.createGame()
+  memory.start()
+})
