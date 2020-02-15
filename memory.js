@@ -19,15 +19,15 @@ class Memory {
     var player1 = ""
 
     this.player1.hand.forEach(card => {
-      player1 += `<div class="cards"> 
-      <div class="front"> 
+      player1 += `<div class="cards" > 
+      <div class="front" data-name="${card.name}"> 
         Front content
       </div> 
-      <div class="back">
-        ${card.face}
+      <div class="back" >
+        <img src="${card.img}"></img>
       </div> 
     </div>`
-      document.querySelector("#player1").innerHTML = player1
+      document.querySelector(".game").innerHTML = player1
     })
     console.log(this.player1.hand)
   }

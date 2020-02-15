@@ -9,3 +9,18 @@ html {
 * {
   border: 1px solid black;
 }
+.game {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.cards {
+  width: 187px;
+  height: 250px;
+  margin-top: 10px;
+  border-radius: 3px;
+}
+.front {
+  background-image: url(assets/StarWars.jpg);
+}
+.back {
+}
