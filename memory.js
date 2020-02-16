@@ -19,9 +19,9 @@ class Memory {
     var player1 = ""
 
     this.player1.hand.forEach(card => {
-      player1 += `<div class="cards" > 
-      <div class="front" data-name="${card.name}"> 
-        Front content
+      player1 += `<div class="cards" data-name="${card.name}"> 
+      <div class="front"> 
+       
       </div> 
       <div class="back" >
         <img src="${card.img}"></img>
