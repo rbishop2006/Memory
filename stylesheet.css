@@ -6,18 +6,19 @@ html {
 *::after {
   box-sizing: inherit;
 }
-* {
-  border: 1px solid black;
-}
 .game {
   display: grid;
+  grid-gap: 10px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  background-color: lightblue;
+  padding: 0;
+  margin: 0;
 }
 .cards {
   width: 187px;
   height: 250px;
-  margin-top: 10px;
   border-radius: 3px;
+  margin: 10px;
 }
 /* .matched {
   width: 187px;
