@@ -19,6 +19,13 @@ html {
   margin-top: 10px;
   border-radius: 3px;
 }
+/* .matched {
+  width: 187px;
+  height: 250px;
+  margin-top: 10px;
+  border-radius: 3px;
+  background-image: url(assets/yoda.jpg);
+} */
 .front {
   background-image: url(assets/StarWars.jpg);
 }
