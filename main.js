@@ -7,6 +7,8 @@ $(document).ready(function() {
 
   var name1 = null
   var name2 = null
+  var turns = 20
+  var matchedCards = 0
   $(".game").on("click", ".cards", function(e) {
     e.preventDefault()
 
@@ -22,7 +24,15 @@ $(document).ready(function() {
         console.log("match")
         name1 = null
         name2 = null
+        turns = turns
+        matchedCards++
+        if (matchedCards == 9) {
+          setTimeout(() => {
+            $(".game").html("You Win")
+          }, 1000)
+        }
       } else if (name1.data("name") != name2.data("name")) {
+        turns--
         setTimeout(() => {
           name1.flip(false)
           name2.flip(false)
@@ -30,8 +40,13 @@ $(document).ready(function() {
           name1 = null
           name2 = null
         }, 1000)
+        if (turns === 0) {
+          $(".game").html("Game Over, You Lose")
+        }
       }
     }
     console.log(name1, name2)
+    console.log(turns)
+    $("#turnsLeftInGame").html(`Guesses left ${turns}`)
   })
 })
