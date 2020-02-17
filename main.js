@@ -1,14 +1,25 @@
 $(document).ready(function() {
-  var memory = new Memory("pname")
-
-  memory.createGame()
-  memory.start()
-  $(".cards").flip()
-
   var name1 = null
   var name2 = null
-  var turns = 20
-  var matchedCards = 0
+  var turns = null
+  var matchedCards = null
+  var memory = null
+  $(".startGame").on("click", function(e) {
+    e.preventDefault()
+    memory = new Memory("pname")
+    memory.createGame()
+    memory.start()
+    $("body")
+      .removeClass("background2 background3")
+      .addClass("background1")
+    $(".cards").flip()
+    $("#turnsLeftInGame").html(`Guesses left 20`)
+    $(".startGame").html(`Restart`)
+    name1 = null
+    name2 = null
+    turns = 20
+    matchedCards = 0
+  })
   $(".game").on("click", ".cards", function(e) {
     e.preventDefault()
 
@@ -28,7 +39,12 @@ $(document).ready(function() {
         matchedCards++
         if (matchedCards == 9) {
           setTimeout(() => {
-            $(".game").html("You Win")
+            $("body")
+              .removeClass("background1")
+              .addClass("background2")
+            $(".game").html(
+              `<div class="gameWon"><h1>You Win</h1><h3>"Do or do not. There is no try.  Pass on what you have learned"</h3</div>`
+            )
           }, 1000)
         }
       } else if (name1.data("name") != name2.data("name")) {
@@ -39,10 +55,16 @@ $(document).ready(function() {
           console.log("mismatch")
           name1 = null
           name2 = null
+          if (turns === 0) {
+            $("body")
+              .removeClass("background1")
+              .addClass("background3")
+            $(".game").html(
+              `<div class="gameLost"><h1>Game Over<h1><h3>“You don’t know the power of the dark side! 
+              You must Restart your game.”</h3></div>`
+            )
+          }
         }, 1000)
-        if (turns === 0) {
-          $(".game").html("Game Over, You Lose")
-        }
       }
     }
     console.log(name1, name2)
