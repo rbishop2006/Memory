@@ -13,11 +13,11 @@ $(document).ready(function() {
       .removeClass("background2 background3")
       .addClass("background1")
     $(".cards").flip()
-    $("#turnsLeftInGame").html(`Guesses left 20`)
+    $("#turnsLeftInGame").html(`Guesses left 15`)
     $(".startGame").html(`Restart`)
     name1 = null
     name2 = null
-    turns = 20
+    turns = 15
     matchedCards = 0
   })
   $(".game").on("click", ".cards", function(e) {

@@ -14,19 +14,19 @@ body {
   background-image: url(assets/helmets.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
-  transition: 2s;
+  transition: 1.75s;
 }
 .background2 {
   background-image: url(assets/winScreen.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  transition: 2s;
+  transition: 1.75s;
 }
 .background3 {
   background-image: url(assets/loseScreen.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  transition: 2s;
+  transition: 1.75s;
 }
 
 #container {
@@ -103,7 +103,7 @@ body {
   border-radius: 5px;
 }
 .gameWon {
-  transition: 2s;
+  transition: 1.75s;
   background-image: url(assets/yodaWon.png);
   background: cover;
   background-repeat: no-repeat;
@@ -119,7 +119,7 @@ body {
   padding-left: 313px;
 }
 .gameLost {
-  transition: 2s;
+  transition: 1.75s;
   background-image: url(assets/darthVaderLost.png);
   background: cover;
   background-repeat: no-repeat;
